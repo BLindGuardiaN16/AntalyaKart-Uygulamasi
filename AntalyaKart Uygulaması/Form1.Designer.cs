@@ -62,20 +62,22 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Orange;
             this.button2.Location = new System.Drawing.Point(741, 303);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(227, 184);
             this.button2.TabIndex = 7;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.Lime;
             this.button1.Location = new System.Drawing.Point(252, 303);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(227, 184);
             this.button1.TabIndex = 6;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // baslik

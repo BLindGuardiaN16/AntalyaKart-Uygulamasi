@@ -16,7 +16,6 @@ namespace AntalyaKart_Uygulaması
     public partial class Form4 : Form
     {
          int eskipara;
-        //Bu cs dosyası tamamen değişecek
         string path = Application.StartupPath;
         public Form4()
         {
@@ -28,7 +27,7 @@ namespace AntalyaKart_Uygulaması
             comboBox1.Items.Clear();
             SqlConnection conn = new SqlConnection("Data Source=AHMET;Initial Catalog=AntalyaKartDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
             conn.Open();
-            string sorgu = String.Format("SELECT * FROM Kartlar WHERE TcKimlik={0}",Form3.tckimlik);
+            string sorgu = String.Format("SELECT * FROM Kartlar WHERE TcKimlik='{0}'",Form3.tckimlik);
             SqlCommand komut = new SqlCommand(sorgu,conn);
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
@@ -169,7 +168,7 @@ namespace AntalyaKart_Uygulaması
             comboBox2.Items.Clear();
             SqlConnection conn = new SqlConnection("Data Source=AHMET;Initial Catalog=AntalyaKartDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
             conn.Open();
-            string sorgu = String.Format("SELECT * FROM Kartlar WHERE TcKimlik={0}", Form3.tckimlik);
+            string sorgu = String.Format("SELECT * FROM Kartlar WHERE TcKimlik='{0}'", Form3.tckimlik);
             SqlCommand komut = new SqlCommand(sorgu, conn);
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())

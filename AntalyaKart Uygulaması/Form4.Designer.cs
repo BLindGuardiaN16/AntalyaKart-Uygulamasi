@@ -96,9 +96,9 @@
             this.bakiyelabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.bakiyelabel.Location = new System.Drawing.Point(148, 227);
             this.bakiyelabel.Name = "bakiyelabel";
-            this.bakiyelabel.Size = new System.Drawing.Size(115, 36);
+            this.bakiyelabel.Size = new System.Drawing.Size(79, 36);
             this.bakiyelabel.TabIndex = 7;
-            this.bakiyelabel.Text = "505 TL";
+            this.bakiyelabel.Text = "0 TL";
             // 
             // label1
             // 

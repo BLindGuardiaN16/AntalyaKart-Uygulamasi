@@ -27,7 +27,7 @@ namespace AntalyaKart_Uygulaması
 
         private void girisbutton_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=AHMET;Initial Catalog=AntalyaKartDB;Integrated Security=True;Encrypt=True;TrustServerCertificate=True");
+            SqlConnection conn = new SqlConnection("Data Source=AHMET;Initial Catalog=AntalyaKartDB;Integrated Security=True;TrustServerCertificate=True");
             conn.Open();
             string sorgu = 
             String.Format("Select COUNT(TcKimlik),COUNT(Sifre) from Kullanici where TcKimlik='{0}' and Sifre='{1}'",tckimliktxt.Text,sifretxt.Text);
@@ -48,7 +48,7 @@ namespace AntalyaKart_Uygulaması
 
             if (Count == 1)
             {
-                MessageBox.Show("Oldu deneme");
+                MessageBox.Show("Başarıyla giriş yaptınız!");
                 tckimlik = tckimliktxt.Text;
                 Form4 form4 = new Form4();
                 form4.Show();
@@ -56,7 +56,8 @@ namespace AntalyaKart_Uygulaması
             }
             else
             {
-                MessageBox.Show("Olmadı la gardas");
+                MessageBox.Show("Maalesef kimliğinizi veya şifrenizi yanlış girdiniz." +
+                    "Lütfen tekrar deneyin.");
                 Count = 0;
             }
             conn.Close();
